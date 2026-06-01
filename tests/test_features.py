@@ -1,7 +1,6 @@
 """Tests for FeatureEngineer."""
 
 import pytest
-import pandas as pd
 from roas_prediction.data.generator import DataGenerator
 from roas_prediction.features.engineering import FeatureEngineer, FEATURE_COLUMNS
 

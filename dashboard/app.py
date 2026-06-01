@@ -506,29 +506,16 @@ with tab_log:
         )
     ]
 
-    # Summary table
-    table_rows = []
-    for r in filtered:
-        p = r.get("payload", {})
-        table_rows.append(
-            {
-                "Timestamp": fmt_ts(r["timestamp"]),
-                "Event Type": r["event_type"],
-                "Event ID": r["event_id"][:8] + "…",
-                "Details": _summary(r),
-            }
-        )
-
     def _summary(r: dict) -> str:
         p = r.get("payload", {})
         et = r["event_type"]
         if et == "data_generation":
             return f"{p.get('rows_generated')} rows, seed={p.get('seed')}"
         if et == "feature_engineering":
-            return f"{p.get('input_rows')} → {p.get('output_rows')} rows, added: {', '.join(p.get('features_added', []))}"
+            return f"{p.get('input_rows')} -> {p.get('output_rows')} rows, added: {', '.join(p.get('features_added', []))}"
         if et == "training_run":
             m = p.get("metrics", {})
-            return f"RMSE=${m.get('rmse', 0):,.2f}, R²={m.get('r2', 0):.4f}, iter={p.get('best_iteration')}"
+            return f"RMSE=${m.get('rmse', 0):,.2f}, R2={m.get('r2', 0):.4f}, iter={p.get('best_iteration')}"
         if et == "prediction":
             s = p.get("summary", {})
             return f"{p.get('rows')} rows, mean ROAS={s.get('mean_predicted_roas', 0):.4f}"

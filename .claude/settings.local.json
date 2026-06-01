@@ -11,7 +11,9 @@
       "Bash(pip show:*)",
       "Bash(.venv/Scripts/pip install:*)",
       "Bash(.venv/Scripts/python main.py)",
-      "Bash(.venv/Scripts/python -m pytest tests/ -v --tb=short)"
+      "Bash(.venv/Scripts/python -m pytest tests/ -v --tb=short)",
+      "Bash(cmd /c run.bat)",
+      "Bash(streamlit run:*)"
     ]
   }
 }
