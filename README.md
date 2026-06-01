@@ -5,7 +5,7 @@
 ![LightGBM](https://img.shields.io/badge/LightGBM-4.3%2B-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-A production-ready ML pipeline that predicts **Revenue** and derives **Return on Ad Spend (ROAS)** for luxury retail using LightGBM — replacing volatile direct-ROAS curve-fitting with a stable two-step framework.
+A production-ready ML pipeline that predicts **Revenue** and derives **Return on Ad Spend (ROAS)** for luxury retail using LightGBM : replacing volatile direct-ROAS curve-fitting with a stable two-step framework.
 
 ---
 
@@ -20,7 +20,7 @@ Raw Data  ──►  Feature Engineering  ──►  LightGBM  ──►  Revenu
 
 **Why predict Revenue instead of ROAS directly?**
 
-ROAS is a ratio. Ratios are mathematically unstable when the denominator (spend) varies — a small spend produces extreme ROAS values that destabilise any gradient boosting model. By modelling revenue with spend as a covariate, we get:
+ROAS is a ratio. Ratios are mathematically unstable when the denominator (spend) varies : a small spend produces extreme ROAS values that destabilise any gradient boosting model. By modelling revenue with spend as a covariate, we get:
 - Numerically stable targets
 - Better handling of diminishing-returns curvature (log-spend transform)
 - Clean post-hoc ROAS derivation for any hypothetical spend scenario
@@ -85,7 +85,7 @@ pip install -e ".[dev]"
 python main.py
 ```
 
-Optional — point at a custom config:
+Optional : point at a custom config:
 
 ```bash
 python main.py --config configs/model_config.yaml
@@ -203,4 +203,4 @@ Every pipeline step writes a structured JSON-Line record to `logs/audit.jsonl`:
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT : see [LICENSE](LICENSE).
