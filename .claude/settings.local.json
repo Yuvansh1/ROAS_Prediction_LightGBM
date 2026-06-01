@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python main.py)",
+      "Bash(mv:*)",
+      "Bash(python:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(conda install:*)",
+      "Bash(conda update:*)",
+      "Bash(pip show:*)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(.venv/Scripts/python main.py)",
+      "Bash(.venv/Scripts/python -m pytest tests/ -v --tb=short)"
+    ]
+  }
+}

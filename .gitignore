@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments — use .venv/Scripts/python to run
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Project outputs (keep directory, not files)
+outputs/*.txt
+outputs/*.json
+outputs/*.pkl
+outputs/*.csv
+!outputs/.gitkeep
+
+# Logs (keep directory, not files)
+logs/*.jsonl
+logs/*.log
+!logs/.gitkeep
+
+# Data
+data/raw/
+data/processed/
+*.parquet
+*.feather
+
+# Streamlit
+.streamlit/secrets.toml

@@ -1,0 +1,37 @@
+data:
+  start_date: "2024-01-01"
+  end_date: "2025-12-31"
+  seed: 42
+  holiday_months: [11, 12]
+  marketing_spend_range: [5000, 25000]
+  baseline_range: [30000, 45000]
+  noise_std: 2000
+
+features:
+  lag_days: [1, 7]
+  rolling_windows: [7]
+
+model:
+  objective: regression
+  metric: rmse
+  learning_rate: 0.05
+  num_leaves: 31
+  min_child_samples: 20
+  feature_fraction: 0.9
+  bagging_fraction: 0.9
+  bagging_freq: 5
+  reg_alpha: 0.1
+  reg_lambda: 0.1
+  verbose: -1
+
+training:
+  test_days: 90
+  num_boost_round: 500
+  early_stopping_rounds: 20
+  save_model: true
+  output_dir: outputs
+
+logging:
+  level: INFO
+  audit_log_path: logs/audit.jsonl
+  app_log_path: logs/app.log
