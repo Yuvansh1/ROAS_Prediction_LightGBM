@@ -1,6 +1,6 @@
 # ROAS Prediction with LightGBM
 
-![CI](https://github.com/yuvansh/ROAS_Prediction_LightGBM/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/Yuvansh1/ROAS_Prediction_LightGBM/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 ![LightGBM](https://img.shields.io/badge/LightGBM-4.3%2B-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
